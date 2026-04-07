@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply box-border;
+    }
+
+    body {
+        @apply bg-aviation-darker text-aviation-light font-body overflow-x-hidden;
+        line-height: 1.6;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+
+    /* Refined, Premium Card Design with Advanced Glassmorphism */
+    .card {
+        @apply bg-aviation-dark/50 backdrop-blur-xl border border-aviation-primary/20 rounded-2xl p-6 relative overflow-hidden transition-all duration-700;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    /* The Hover Glow Effect */
+    .card:hover {
+        @apply border-aviation-accent/50 bg-aviation-dark/80 transform -translate-y-1;
+        box-shadow: 0 10px 40px 0 rgba(255, 107, 53, 0.15), inset 0 0 20px rgba(255, 107, 53, 0.05);
+    }
+
+    /* Input fields that look like engineering tools */
+    .input-field {
+        @apply w-full bg-aviation-darker/80 border border-aviation-primary/40 rounded-lg px-4 py-3 text-aviation-light focus:outline-none focus:border-aviation-accent focus:ring-1 focus:ring-aviation-accent transition-all duration-300;
+    }
+
+    /* Premium Buttons */
+    .btn-primary {
+        @apply relative px-8 py-3 bg-aviation-accent text-white rounded-full font-bold overflow-hidden transition-all duration-300 transform;
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+    }
+
+    .btn-primary:hover {
+        @apply scale-105;
+        box-shadow: 0 0 30px rgba(255, 107, 53, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary {
+        @apply px-8 py-3 bg-transparent text-aviation-light border border-aviation-primary rounded-full font-bold transition-all duration-300 hover:border-aviation-accent hover:text-aviation-accent hover:bg-aviation-accent/10;
+    }
+
+    .result-box {
+        @apply bg-aviation-darker/90 backdrop-blur-2xl border-l-4 border-aviation-accent rounded-r-2xl p-8 shadow-2xl;
+    }
+
+    .formula-box {
+        @apply mt-6 p-4 bg-gradient-to-br from-aviation-primary/10 to-transparent border border-aviation-primary/30 rounded-lg font-mono text-sm;
+    }
+
+    .tab-button {
+        @apply px-6 py-3 font-display font-bold text-sm tracking-wider text-aviation-text-dim border-b-2 border-transparent transition-all duration-300 hover:text-aviation-light hover:border-aviation-primary/50;
+    }
+
+    .tab-button.active {
+        @apply text-aviation-accent border-aviation-accent bg-gradient-to-t from-aviation-accent/10 to-transparent rounded-t-lg;
+        box-shadow: 0 -5px 15px -5px rgba(255, 107, 53, 0.3);
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-aviation-primary-light to-aviation-accent;
+    }
+
+    /* Float animation for the Loader plane */
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    /* Delay utilities for staggered animations */
+    .animate-delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .animate-delay-400 {
+        animation-delay: 0.4s;
+    }
+
+    .animate-delay-600 {
+        animation-delay: 0.6s;
+    }
+
+    .animate-delay-800 {
+        animation-delay: 0.8s;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(-45deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+}
+
+/* Premium Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d1b2a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e6bb8;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6b35;
+}
